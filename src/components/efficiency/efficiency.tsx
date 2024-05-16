@@ -1,4 +1,4 @@
-import { TiChartLine } from "react-icons/ti";
+// import { TiChartLine } from "react-icons/ti";
 
 const Efficiency = () => {
   return (

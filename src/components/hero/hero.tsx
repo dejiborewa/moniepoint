@@ -23,7 +23,11 @@ const Hero = () => {
             </h1>
           </div>
 
-          <img src="/hero.png" alt="hero-img" className="w-[40%] 2xl:w-auto" />
+          <img
+            src="/hero.png"
+            alt="hero-img"
+            className="md:w-[30%] 2xl:w-auto"
+          />
         </div>
 
         <h1 className="flex items-center justify-end text-nowrap">
