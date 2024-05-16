@@ -16,9 +16,11 @@ const Hero = () => {
                 <GiDna2 className="text-white w-[40px] h-[40px]" />
               </div>
 
-              <h1 className="text-[50px] 2xl:text-[150px]">Analytics</h1>
+              <h1 className="text-[50px] lg:text-[80px] 2xl:text-[150px]">
+                Analytics
+              </h1>
             </div>
-            <h1 className="text-nowrap text-[50px] 2xl:text-[150px] 2xl:leading-[5rem]">
+            <h1 className="text-nowrap text-[50px] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[5rem]">
               that <span className="text-darkGrey">helps</span> you
             </h1>
           </div>
@@ -31,7 +33,7 @@ const Hero = () => {
         </div>
 
         <h1 className="flex items-center justify-end text-nowrap">
-          <span className="text-[50px] 2xl:text-[150px] 2xl:leading-[12rem]">
+          <span className="text-[50px] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[12rem]">
             shape
           </span>
           <div className="w-[100px] h-[100px] bg-yellow rounded-full flex gap-[4px] items-center justify-center mx-6">
@@ -39,7 +41,7 @@ const Hero = () => {
             <div className="bg-black rounded-sm w-[6px] h-[22px]"></div>
             <div className="bg-black rounded-sm w-[6px] h-[12px]"></div>
           </div>
-          <span className="text-[50px] 2xl:text-[150px] 2xl:leading-[12rem]">
+          <span className="text-[50px] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[12rem]">
             the future
           </span>
         </h1>

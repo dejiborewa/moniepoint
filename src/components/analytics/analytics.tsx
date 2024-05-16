@@ -4,7 +4,7 @@ import { FaArrowCircleUp } from "react-icons/fa";
 
 const Analytics = () => {
   return (
-    <section className="w-auto h-screen rounded-[100px] bg-offWhite -mx-6 px-20 flex flex-col justify-around">
+    <section className="w-auto h-screen rounded-[100px] bg-offWhite -mx-6 px-20 py-10 flex flex-col justify-around">
       <div className="flex justify-between items-center">
         <h1 className="leading-[2.7rem] text-[40px] font-[500]">
           Your key to strategic
