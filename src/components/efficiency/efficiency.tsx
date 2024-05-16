@@ -1,4 +1,4 @@
-// import { TiChartLine } from "react-icons/ti";
+import { TiChartLine } from "react-icons/ti";
 
 const Efficiency = () => {
   return (
@@ -9,7 +9,11 @@ const Efficiency = () => {
       </h1>
 
       <div>
-        <div className="w-[100px] h-[100px] bg-offWhite rounded-full"></div>
+        <div className="w-[100px] h-[100px] bg-offWhite rounded-full">
+          <span className="bg-orange w-[40px] h-[40px] rounded-[10px]">
+            <TiChartLine />
+          </span>
+        </div>
       </div>
     </section>
   );

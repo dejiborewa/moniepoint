@@ -4,7 +4,7 @@ import { FaArrowCircleUp } from "react-icons/fa";
 
 const Analytics = () => {
   return (
-    <section className="w-auto h-screen rounded-[100px] bg-offWhite -mx-6 px-20 py-20 flex flex-col justify-around">
+    <section className="w-auto h-screen rounded-[100px] bg-offWhite -mx-6 px-20 flex flex-col justify-around">
       <div className="flex justify-between items-center">
         <h1 className="leading-[2.7rem] text-[40px] font-[500]">
           Your key to strategic
@@ -21,7 +21,7 @@ const Analytics = () => {
 
       <div className="flex items-center justify-between h-[350px] my-[4rem]">
         <div className="w-[50%] relative bg-white flex justify-between h-full p-8 rounded-[20px] border-[#ebebeb] border-2 my-10">
-          <div className="w-[30%] flex flex-col justify-between">
+          <div className="w-[50%] flex flex-col justify-between 2xl:w-[30%]">
             <Button
               classname="bg-yellow shadow-md py-2 px-4 rounded-[10px] text-[14px] font-semibold w-max"
               text="Setting up reports"
@@ -39,7 +39,7 @@ const Analytics = () => {
             </div>
           </div>
 
-          <div className="w-[40%] rounded-[20px] border-t-2 border-l-2 border-[#f4f4f4] p-4 flex flex-col justify-between gap-[1rem] absolute right-0 bottom-0 max-h-[350px]">
+          <div className="w-[40%] rounded-tl-[20px] border-t-2 border-l-2 border-[#f4f4f4] p-4 flex flex-col justify-between gap-[1rem] absolute right-0 bottom-0 max-h-[350px]">
             <div>
               <h2 className="font-semibold">Sales statistic</h2>
               <div className="flex">
@@ -115,7 +115,7 @@ const Analytics = () => {
           <h3 className="text-offWhite font-bold text-[24px] py-4">
             Widget Control
           </h3>
-          <p className="text-offWhite w-[50%] mx-auto">
+          <p className="text-darkGrey w-[50%] mx-auto">
             Reports provide a comprehensive overview of important aspect of web
             analytics
           </p>
@@ -125,9 +125,7 @@ const Analytics = () => {
       <div className="flex justify-center items-center gap-[3rem]">
         <div>
           <span className="text-[30px] mr-4">Up to</span>
-          <span className="text-[50px] lg:text-[80px] 2xl:text-[150px]">
-            45%
-          </span>
+          <span className="text-[50px] 2xl:text-[150px]">45%</span>
         </div>
 
         <span>
