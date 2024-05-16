@@ -10,7 +10,7 @@ const Header = () => {
         <span className="text-base font-bold">ramos</span>
       </div>
 
-      <ul className="flex items-center bg-lightGrey font-light text-[14px] h-full gap-[2em] px-[2em] rounded-[14px]">
+      <ul className="flex items-center bg-grey font-light text-[14px] h-full gap-[2em] px-[2em] rounded-[14px]">
         {headerList.map((item, index) => (
           <li key={index} className="cursor-pointer font-semibold">
             {item}

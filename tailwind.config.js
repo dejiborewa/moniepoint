@@ -7,7 +7,9 @@ export default {
         base: "18px",
       },
       colors: {
-        lightGrey: "#4f4f4f",
+        grey: "#4f4f4f",
+        lightGrey: "#f9f9f9",
+        darkGrey: "#B8B8B8",
         black: "#0d0d0d",
         offWhite: "#f0f0f0",
         yellow: "#ffd027",
