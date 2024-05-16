@@ -1,5 +1,6 @@
 import "./App.css";
 import Analytics from "./components/analytics/analytics";
+import Efficiency from "./components/efficiency/efficiency";
 import Header from "./components/header/header";
 import Hero from "./components/hero/hero";
 
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Hero />
       <Analytics />
+      <Efficiency />
     </main>
   );
 }
