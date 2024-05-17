@@ -3,6 +3,7 @@ import Analytics from "./components/analytics/analytics";
 import Efficiency from "./components/efficiency/efficiency";
 import Header from "./components/header/header";
 import Hero from "./components/hero/hero";
+import Data from "./components/data/data";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <Analytics />
       <Efficiency />
+      <Data />
     </main>
   );
 }

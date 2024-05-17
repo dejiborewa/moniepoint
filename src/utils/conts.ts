@@ -5,3 +5,9 @@ export const headerList = [
   "History",
   "Settings",
 ];
+
+export const dataList = [
+  "Instant Insights",
+  "AI Technology",
+  "Easy integration",
+];

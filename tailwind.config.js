@@ -15,6 +15,9 @@ export default {
         yellow: "#ffd027",
         orange: "#fe4a23",
       },
+      screens: {
+        "2xl": "1600px",
+      },
     },
   },
   plugins: [],

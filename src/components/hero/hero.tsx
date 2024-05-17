@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="w-full h-[calc(100vh-72px)] p-10 flex items-center justify-center bg-white">
       <div>
-        <div className="flex gap-[2rem] w-full">
+        <div className="flex justify-between gap-[2rem] w-full 2xl:justify-start">
           <div className="w-[50%] 2xl:w-auto">
             <div className="flex items-center relative left-[1rem] 2xl:left-[3em]">
               <div className="w-[100px] h-[100px] bg-offWhite rounded-full flex items-center justify-center">
@@ -20,7 +20,7 @@ const Hero = () => {
                 Analytics
               </h1>
             </div>
-            <h1 className="text-nowrap text-[50px] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[5rem]">
+            <h1 className="text-nowrap leading-[2rem] text-[50px] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[5rem]">
               that <span className="text-darkGrey">helps</span> you
             </h1>
           </div>
@@ -33,7 +33,7 @@ const Hero = () => {
         </div>
 
         <h1 className="flex items-center justify-end text-nowrap">
-          <span className="text-[50px] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[12rem]">
+          <span className="text-[50px] leading-[6rem] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[12rem]">
             shape
           </span>
           <div className="w-[100px] h-[100px] bg-yellow rounded-full flex gap-[4px] items-center justify-center mx-6">
@@ -41,7 +41,7 @@ const Hero = () => {
             <div className="bg-black rounded-sm w-[6px] h-[22px]"></div>
             <div className="bg-black rounded-sm w-[6px] h-[12px]"></div>
           </div>
-          <span className="text-[50px] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[12rem]">
+          <span className="text-[50px] leading-[6rem] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[12rem]">
             the future
           </span>
         </h1>

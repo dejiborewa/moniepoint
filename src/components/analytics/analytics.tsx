@@ -4,7 +4,7 @@ import { FaArrowCircleUp } from "react-icons/fa";
 
 const Analytics = () => {
   return (
-    <section className="w-auto h-screen rounded-[100px] bg-offWhite -mx-6 px-20 py-10 flex flex-col justify-around">
+    <section className="w-auto h-screen rounded-[100px] bg-offWhite -mx-6 px-20 my-10 flex flex-col justify-around 2xl:px-[7.5rem]">
       <div className="flex justify-between items-center">
         <h1 className="leading-[2.7rem] text-[40px] font-[500]">
           Your key to strategic
@@ -12,7 +12,7 @@ const Analytics = () => {
           success through analytics
         </h1>
 
-        <p className="text-justify">
+        <p className="text-justify text-base">
           Ready for exciting, instantanous,
           <br />
           all-accessible insights in real time?
@@ -128,7 +128,7 @@ const Analytics = () => {
           <span className="text-[50px] 2xl:text-[150px]">45%</span>
         </div>
 
-        <span>
+        <span className="text-base">
           Increase your analytics efficiency by up to 45%. Unique
           <br />
           algorithms provide insights from data, reduce time for analysis
