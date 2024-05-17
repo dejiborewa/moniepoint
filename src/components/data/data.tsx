@@ -2,7 +2,7 @@ import Menu from "../menu/menu";
 
 const Data = () => {
   return (
-    <section className="bg-offWhite h-[145vh] -mx-6 rounded-[100px] pl-10 py-20 2xl:pl-[7.5rem]">
+    <section className="bg-offWhite h-[145vh] -mx-6 rounded-[100px] pl-20 py-20">
       <div className="flex overflow-x-hidden relative top-[15vh] 2xl:top-[20vh]">
         <div className="w-[50%] 2xl:w-[40%]">
           <div className="text-[80px] leading-[6rem]">

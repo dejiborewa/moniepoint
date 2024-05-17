@@ -25,7 +25,7 @@ const Efficiency = () => {
   useMotionValue(0);
 
   return (
-    <section className="bg-white h-screen py-10 flex flex-col justify-around 2xl:px-20">
+    <section className="bg-white h-screen py-10 px-20 flex flex-col justify-around">
       <h1 className="text-[50px] leading-[5rem] lg:text-[80px] 2xl:text-[200px] 2xl:leading-[10rem]">
         Maximum <span className="text-darkGrey">efficiency</span> <br />
         with our intuitive
@@ -64,7 +64,7 @@ const Efficiency = () => {
       </div>
 
       <div className="flex justify-between border-t-2 border-darkGrey py-10">
-        <div>
+        <div className="text-base">
           <p>
             Explore traffic sources, page behavior, conversions and more to gain
             deep insight
