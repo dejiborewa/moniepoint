@@ -4,6 +4,9 @@ import Efficiency from "./components/efficiency/efficiency";
 import Header from "./components/header/header";
 import Hero from "./components/hero/hero";
 import Data from "./components/data/data";
+import Control from "./components/control/control";
+import GetStarted from "./components/getStarted/getStarted";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
       <Analytics />
       <Efficiency />
       <Data />
+      <Control />
+      <GetStarted />
+      <Footer />
     </main>
   );
 }

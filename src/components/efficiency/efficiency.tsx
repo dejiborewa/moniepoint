@@ -2,7 +2,7 @@ import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect } from "react";
 import { TiChartLine } from "react-icons/ti";
 import useMeasure from "react-use-measure";
-import Button from "../button/button";
+import Button from "../lib/button/button";
 
 const Efficiency = () => {
   const [ref, bounds] = useMeasure();
@@ -26,21 +26,21 @@ const Efficiency = () => {
 
   return (
     <section className="bg-white h-screen py-10 px-20 flex flex-col justify-around">
-      <h1 className="text-[50px] leading-[5rem] lg:text-[80px] 2xl:text-[200px] 2xl:leading-[10rem]">
+      <h1 className="text-[50px] leading-[5rem] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[10rem]">
         Maximum <span className="text-darkGrey">efficiency</span> <br />
         with our intuitive
       </h1>
 
       <div className="flex justify-between my-8 2xl:my-16">
         <div className="flex">
-          <div className="w-[150px] h-[150px]  2xl:w-[200px] 2xl:h-[200px] bg-offWhite rounded-full flex items-center justify-center z-10">
+          <div className="w-[100px] h-[100px]  2xl:w-[200px] 2xl:h-[200px] bg-offWhite rounded-full flex items-center justify-center z-10">
             <span className="bg-orange w-[50px] h-[50px] rounded-[10px] flex items-center justify-center">
               <TiChartLine className="text-white text-2xl" />
             </span>
           </div>
 
-          <div className="w-[150px] h-[150px] 2xl:w-[200px] 2xl:h-[200px] bg-yellow rounded-full flex items-center justify-center relative -left-4">
-            <div className="text-center w-[150px]">
+          <div className="w-[100px] h-[100px] 2xl:w-[200px] 2xl:h-[200px] bg-yellow rounded-full flex items-center justify-center relative -left-4">
+            <div className="text-center w-[80px]">
               <span className="font-semibold text-[25px]">45%</span>
               <span className="block font-light text-[14px]">
                 System grow faster
@@ -78,11 +78,11 @@ const Efficiency = () => {
         <div className="flex gap-[1rem]">
           <Button
             text="Request a demo"
-            classname="bg-offWhite px-10 py-2 rounded-[14px] font-semibold"
+            classname="bg-offWhite px-12 py-4 rounded-[14px] font-semibold"
           />
           <Button
             text="Start for free"
-            classname="bg-orange px-10 py-2 rounded-[14px] text-white"
+            classname="bg-orange px-12 py-4 rounded-[14px] text-white"
           />
         </div>
       </div>

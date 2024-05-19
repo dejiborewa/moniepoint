@@ -1,4 +1,4 @@
-import Button from "../button/button";
+import Button from "../lib/button/button";
 import { TbBrandDatabricks } from "react-icons/tb";
 import { FaArrowCircleUp } from "react-icons/fa";
 

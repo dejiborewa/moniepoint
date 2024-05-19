@@ -1,4 +1,4 @@
-import { dataList } from "../../utils/conts";
+import { dataList } from "../../../utils/conts";
 import { FiPlus } from "react-icons/fi";
 
 const Menu = () => {

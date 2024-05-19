@@ -1,6 +1,6 @@
 import { IoIosLink } from "react-icons/io";
 import { headerList } from "../../utils/conts";
-import Button from "../button/button";
+import Button from "../lib/button/button";
 
 const Header = () => {
   return (

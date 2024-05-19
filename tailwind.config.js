@@ -18,6 +18,10 @@ export default {
       screens: {
         "2xl": "1600px",
       },
+      boxShadow: {
+        gridTop: "0px -5px 3px 3px #f0f0f0",
+        orange: "0px 3px 10px #fe4a23",
+      },
     },
   },
   plugins: [],
