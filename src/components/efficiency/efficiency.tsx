@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { TiChartLine } from "react-icons/ti";
 import useMeasure from "react-use-measure";
 import Button from "../lib/button/button";
+import { AnimateStaggeredCharcterVeritical } from "../animation-wrapper/animation-wrapper";
 
 const Efficiency = () => {
   const [ref, bounds] = useMeasure();
@@ -27,8 +28,22 @@ const Efficiency = () => {
   return (
     <section className="bg-white h-screen py-10 px-20 flex flex-col justify-around">
       <h1 className="text-[50px] leading-[5rem] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[10rem]">
-        Maximum <span className="text-darkGrey">efficiency</span> <br />
-        with our intuitive
+        <AnimateStaggeredCharcterVeritical>
+          Maximum
+        </AnimateStaggeredCharcterVeritical>{" "}
+        <AnimateStaggeredCharcterVeritical className="text-darkGrey">
+          efficiency
+        </AnimateStaggeredCharcterVeritical>{" "}
+        <br />
+        <AnimateStaggeredCharcterVeritical>
+          with
+        </AnimateStaggeredCharcterVeritical>{" "}
+        <AnimateStaggeredCharcterVeritical>
+          our
+        </AnimateStaggeredCharcterVeritical>{" "}
+        <AnimateStaggeredCharcterVeritical>
+          intuative
+        </AnimateStaggeredCharcterVeritical>
       </h1>
 
       <div className="flex justify-between my-8 2xl:my-16">

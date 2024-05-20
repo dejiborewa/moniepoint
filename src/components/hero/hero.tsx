@@ -1,5 +1,9 @@
 import { AiFillThunderbolt } from "react-icons/ai";
 import { GiDna2 } from "react-icons/gi";
+import {
+  AnimateScaleImage,
+  AnimateStaggeredCharcterVeritical,
+} from "../animation-wrapper/animation-wrapper";
 
 const Hero = () => {
   return (
@@ -16,16 +20,27 @@ const Hero = () => {
                 <GiDna2 className="text-white w-[40px] h-[40px]" />
               </div>
 
-              <h1 className="text-[50px] lg:text-[80px] 2xl:text-[150px]">
-                Analytics
+              <h1 className=" text-[50px] lg:text-[80px] 2xl:text-[150px]">
+                <AnimateStaggeredCharcterVeritical>
+                  Analytics
+                </AnimateStaggeredCharcterVeritical>
               </h1>
             </div>
-            <h1 className="text-nowrap leading-[2rem] text-[50px] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[5rem]">
-              that <span className="text-darkGrey">helps</span> you
+            <h1 className="text-nowrap  text-[50px] lg:text-[80px] 2xl:text-[150px]">
+              <AnimateStaggeredCharcterVeritical>
+                that
+              </AnimateStaggeredCharcterVeritical>{" "}
+              <AnimateStaggeredCharcterVeritical>
+                helps
+              </AnimateStaggeredCharcterVeritical>{" "}
+              <AnimateStaggeredCharcterVeritical>
+                you
+              </AnimateStaggeredCharcterVeritical>
+              {/* <span className="text-darkGrey"></span>  */}
             </h1>
           </div>
 
-          <img
+          <AnimateScaleImage
             src="/hero.png"
             alt="hero-img"
             className="md:w-[30%] 2xl:w-auto"
@@ -34,7 +49,9 @@ const Hero = () => {
 
         <h1 className="flex items-center justify-end text-nowrap">
           <span className="text-[50px] leading-[6rem] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[12rem]">
-            shape
+            <AnimateStaggeredCharcterVeritical>
+              shape
+            </AnimateStaggeredCharcterVeritical>
           </span>
           <div className="w-[100px] h-[100px] bg-yellow rounded-full flex gap-[4px] items-center justify-center mx-6">
             <div className="bg-black rounded-sm w-[6px] h-[17px] relative top-2"></div>
@@ -42,7 +59,9 @@ const Hero = () => {
             <div className="bg-black rounded-sm w-[6px] h-[12px]"></div>
           </div>
           <span className="text-[50px] leading-[6rem] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[12rem]">
-            the future
+            <AnimateStaggeredCharcterVeritical>
+              the future
+            </AnimateStaggeredCharcterVeritical>
           </span>
         </h1>
       </div>

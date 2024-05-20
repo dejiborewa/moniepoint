@@ -1,21 +1,31 @@
 import Button from "../lib/button/button";
 import { TbBrandDatabricks } from "react-icons/tb";
 import { FaArrowCircleUp } from "react-icons/fa";
+import AnimateParagraphVeritical from "../animation-wrapper/animation-wrapper";
 
 const Analytics = () => {
   return (
     <section className="w-auto h-screen rounded-[100px] bg-offWhite -mx-6 my-10 p-20 flex flex-col justify-around 2xl:px-[7.5rem]">
       <div className="flex justify-between items-center">
         <h1 className="leading-[2.7rem] text-[40px] font-[500]">
-          Your key to strategic
+          <AnimateParagraphVeritical>
+            Your key to strategic
+          </AnimateParagraphVeritical>
           <br />
-          success through analytics
+
+          <AnimateParagraphVeritical>
+            success through analytics
+          </AnimateParagraphVeritical>
         </h1>
 
         <p className="text-justify text-base">
-          Ready for exciting, instantanous,
+          <AnimateParagraphVeritical>
+            Ready for exciting, instantanous,
+          </AnimateParagraphVeritical>
           <br />
-          all-accessible insights in real time?
+          <AnimateParagraphVeritical>
+            all-accessible insights in real time?
+          </AnimateParagraphVeritical>
         </p>
       </div>
 
