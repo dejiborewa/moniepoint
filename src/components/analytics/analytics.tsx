@@ -1,31 +1,146 @@
 import Button from "../lib/button/button";
 import { TbBrandDatabricks } from "react-icons/tb";
 import { FaArrowCircleUp } from "react-icons/fa";
-import AnimateParagraphVeritical from "../animation-wrapper/animation-wrapper";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Analytics = () => {
-  return (
-    <section className="w-auto h-screen rounded-[100px] bg-offWhite -mx-6 my-10 p-20 flex flex-col justify-around 2xl:px-[7.5rem]">
-      <div className="flex justify-between items-center">
-        <h1 className="leading-[2.7rem] text-[40px] font-[500]">
-          <AnimateParagraphVeritical>
-            Your key to strategic
-          </AnimateParagraphVeritical>
-          <br />
+  const boxRef = useRef(null);
+  const profitCounterRef = useRef<HTMLSpanElement>(null);
+  const transactionCounterRef = useRef<HTMLSpanElement>(null);
+  const mainText = useRef(null);
+  const mainText2 = useRef(null);
+  const rightCard = useRef(null);
+  const leftCard = useRef(null);
 
-          <AnimateParagraphVeritical>
-            success through analytics
-          </AnimateParagraphVeritical>
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: boxRef.current,
+        toggleActions: "restart pause resume pause",
+        start: "top 80%",
+        scrub: true,
+      },
+    });
+
+    if (boxRef.current) {
+      tl.fromTo(
+        boxRef.current,
+        { opacity: 0, y: "30%" },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+        },
+      );
+    }
+
+    if (profitCounterRef.current) {
+      const obj = { value: 0 };
+      tl.fromTo(
+        obj,
+        { value: 15 },
+        {
+          value: 60,
+          duration: 5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: profitCounterRef.current,
+            toggleActions: "restart pause resume pause",
+          },
+          onUpdate: () => {
+            profitCounterRef.current!.textContent = `${Math.floor(
+              obj.value,
+            ).toLocaleString()}K`;
+          },
+        },
+      );
+    }
+
+    if (transactionCounterRef.current) {
+      const obj = { value: 0 };
+      tl.fromTo(
+        obj,
+        { value: 20 },
+        {
+          value: 51,
+          duration: 5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: transactionCounterRef.current,
+            toggleActions: "restart pause resume pause",
+          },
+          onUpdate: () => {
+            transactionCounterRef.current!.textContent = `${Math.floor(
+              obj.value,
+            ).toLocaleString()}K`;
+          },
+        },
+      );
+    }
+
+    if (mainText.current) {
+      tl.from(mainText.current, {
+        yPercent: 100,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: mainText.current,
+        },
+      });
+    }
+
+    if (mainText2.current) {
+      tl.from(mainText2.current, {
+        yPercent: 100,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: mainText2.current,
+        },
+      });
+    }
+
+    if (rightCard.current) {
+      tl.from(rightCard.current, {
+        xPercent: -20,
+        opacity: 0.2,
+        scrollTrigger: {
+          trigger: rightCard.current,
+        },
+      });
+    }
+
+    if (leftCard.current) {
+      tl.from(leftCard.current, {
+        xPercent: 20,
+        opacity: 0.2,
+        duration: 1,
+        ease: "sine.out",
+        scrollTrigger: {
+          trigger: leftCard.current,
+        },
+      });
+    }
+  });
+
+  return (
+    <section
+      className="w-auto h-screen rounded-[100px] bg-offWhite -mx-6 my-10 p-20 flex flex-col justify-around 2xl:px-[7.5rem]"
+      ref={boxRef}
+    >
+      <div className="flex justify-between items-center">
+        <h1 className="leading-[2.7rem] text-[40px] font-[500]" ref={mainText}>
+          Your key to strategic
+          <br />
+          success through analytics
         </h1>
 
-        <p className="text-justify text-base">
-          <AnimateParagraphVeritical>
-            Ready for exciting, instantanous,
-          </AnimateParagraphVeritical>
+        <p className="text-justify text-base" ref={mainText2}>
+          Ready for exciting, instantanous,
           <br />
-          <AnimateParagraphVeritical>
-            all-accessible insights in real time?
-          </AnimateParagraphVeritical>
+          all-accessible insights in real time?
         </p>
       </div>
 
@@ -71,8 +186,8 @@ const Analytics = () => {
                 <div className="bg-lightGrey rounded-[12px] py-2 px-3 w-[40%]">
                   <span className="text-[12px] font-semibold">Visitors</span>
                   <span className="block relative text-[20px]">
-                    56k
-                    <span className="flex text-green-500 absolute top-0 left-8 text-[8px]">
+                    <span ref={profitCounterRef}></span>
+                    <span className="flex text-green-500 absolute top-0 left-10 text-[8px]">
                       <FaArrowCircleUp className="text-green-500 text-sm" />
                       <span className="ml-1">14%</span>
                     </span>
@@ -87,7 +202,10 @@ const Analytics = () => {
 
         <div className="w-[40%] bg-black rounded-[20px] text-center px-4 py-6 h-full flex flex-col justify-around">
           <div className="flex justify-center gap-[1rem]">
-            <div className="bg-[#121111] border border-[#383535] p-8 flex flex-col gap-[1rem] justify-between rounded-[14px]">
+            <div
+              className="bg-[#121111] border border-[#383535] p-8 flex flex-col gap-[1rem] justify-between rounded-[14px]"
+              ref={leftCard}
+            >
               <span className="w-max mx-auto">
                 <TbBrandDatabricks className="text-yellow w-[40px] h-[40px]" />
               </span>
@@ -109,11 +227,14 @@ const Analytics = () => {
               </span>
             </div>
 
-            <div className="bg-[#121111] border border-[#383535] p-8 flex flex-col justify-between rounded-[14px]">
+            <div
+              className="bg-[#121111] border border-[#383535] p-8 flex flex-col justify-between rounded-[14px]"
+              ref={rightCard}
+            >
               <span className="text-offWhite">Transactions</span>
 
               <span className="block relative text-[30px] text-offWhite w-max">
-                56k
+                <span ref={transactionCounterRef}></span>
                 <span className="flex text-green-500 absolute top-0 left-full text-[8px]">
                   <FaArrowCircleUp className="text-green-500 text-sm" />
                   <span className="ml-1">14%</span>

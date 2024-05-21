@@ -1,11 +1,29 @@
 import { IoIosLink } from "react-icons/io";
 import Button from "../lib/button/button";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 const GetStarted = () => {
+  const getStartedRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(getStartedRef.current, {
+      scale: 2,
+      scrollTrigger: {
+        trigger: getStartedRef.current,
+        toggleActions: "restart pause resume pause",
+      },
+    });
+  });
+
   return (
     <section className="h-screen relative">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="bg-orange w-[150px] h-[150px] flex items-center justify-center rounded-[45px] mx-auto shadow-orange">
+        <div
+          className="bg-orange w-[150px] h-[150px] flex items-center justify-center rounded-[45px] mx-auto shadow-orange"
+          ref={getStartedRef}
+        >
           <IoIosLink className="w-[80px] h-[80px] text-white font-bold" />
         </div>
 

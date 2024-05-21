@@ -1,13 +1,113 @@
 import Grid from "../lib/grid/grid";
 import Revenue from "../lib/revenue/revenue";
+import gsap from "gsap";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import SplitText from "../lib/splitText/splitText";
 
 const Control = () => {
+  const container = useRef<HTMLElement>(null);
+  const profitCounterRef = useRef<HTMLSpanElement>(null);
+  const transactionCounterRef = useRef<HTMLSpanElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container.current,
+        toggleActions: "restart pause resume pause",
+        start: "top 80%",
+        scrub: true,
+      },
+    });
+
+    if (profitCounterRef.current) {
+      const obj = { value: 0 };
+      tl.fromTo(
+        obj,
+        { value: 200 },
+        {
+          value: 1312,
+          duration: 5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: profitCounterRef.current,
+            toggleActions: "restart pause resume pause",
+          },
+          onUpdate: () => {
+            profitCounterRef.current!.textContent = `${Math.floor(
+              obj.value,
+            ).toLocaleString()}K`;
+          },
+        },
+      );
+    }
+
+    if (transactionCounterRef.current) {
+      const obj = { value: 0 };
+      tl.fromTo(
+        obj,
+        { value: 1 },
+        {
+          value: 234,
+          duration: 5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: transactionCounterRef.current,
+            toggleActions: "restart pause resume pause",
+          },
+          onUpdate: () => {
+            transactionCounterRef.current!.textContent = `${Math.floor(
+              obj.value,
+            ).toLocaleString()}K`;
+          },
+        },
+      );
+    }
+
+    gsap.fromTo(
+      container.current,
+      { opacity: 0, yPercent: 30 },
+      {
+        opacity: 1,
+        yPercent: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: container.current,
+          scrub: true,
+          start: "top 80%",
+          end: "center center",
+        },
+      },
+    );
+
+    const letters = document.querySelectorAll(".animate-letter");
+    gsap.fromTo(
+      letters,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.03,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: container.current,
+          toggleActions: "restart pause resume pause",
+        },
+      },
+    );
+  });
+
   return (
-    <section className="bg-white h-screen py-10 px-20">
+    <section className="bg-white h-screen py-10 px-20" ref={container}>
       <h1 className="text-[50px] leading-[5rem] lg:text-[80px] 2xl:text-[150px] 2xl:leading-[10rem]">
-        We give you full
+        {SplitText("We give you full")}
         <br />
-        <span className="text-darkGrey">control</span> over your data
+        <span className="text-darkGrey">{SplitText("control")}</span>{" "}
+        {SplitText("over your data")}
       </h1>
 
       <div className="flex gap-[2rem] my-8 justify-between ">
@@ -18,7 +118,10 @@ const Control = () => {
                 <div className="w-[200px] h-[215px] bg-white border-[0.5px] border-darkGrey p-4 rounded-[14px] text-center flex flex-col justify-around shadow-lg">
                   <p className="text-sm ">Conversion rate</p>
                   <div className="bg-yellow w-max mx-auto rounded-[14px] my-2">
-                    <span className="text-[40px] p-4 font-semibold">2,3%</span>
+                    <span
+                      className="text-[40px] p-4 font-semibold"
+                      ref={profitCounterRef}
+                    ></span>
                   </div>
                   <p className="text-grey text-xs">
                     Percentage of
@@ -29,8 +132,11 @@ const Control = () => {
                 <div className="w-[200px] h-[215px] bg-white border-[0.5px] border-darkGrey p-4 rounded-[14px] flex flex-col justify-around relative -left-6 top-8 shadow-lg">
                   <p className="text-sm text-grey">Sales revenue</p>
                   <div className="my-2">
-                    <span className="text-base font-semibold">
-                      $&nbsp;131,2k
+                    <span
+                      className="text-base font-semibold"
+                      ref={transactionCounterRef}
+                    >
+                      $&nbsp;
                     </span>
 
                     <div className="flex gap-1 my-2">

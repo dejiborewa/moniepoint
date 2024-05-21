@@ -7,43 +7,12 @@ import Data from "./components/data/data";
 import Control from "./components/control/control";
 import GetStarted from "./components/getStarted/getStarted";
 import Footer from "./components/footer/footer";
-import { characterSplit, characterVerticalAnimationIn, scaleFromZero, textSplit, textVerticalAnimationIn } from "./animations/text-animations";
-import { useLayoutEffect } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-  useLayoutEffect(() => {
-    textSplit();
-    characterSplit();
-
-    const allVerticalParagragh = document.querySelectorAll(
-      ".animated-text.vertical-anim"
-    );
-    const allVerticalCharaters = document.querySelectorAll(
-      ".animated-character.vertical-anim"
-    );
-
-    allVerticalParagragh.forEach((paragraph) => {
-      const text = paragraph.querySelectorAll(".paragraph-word");
-
-      text.forEach((text) => {
-        gsap.set(text, { y: "500%" });
-      });
-    });
-
-    allVerticalCharaters.forEach((paragraph) => {
-      const text = paragraph.querySelectorAll(".paragraph-character");
-
-      text.forEach((text) => {
-        gsap.set(text, { y: "500%" });
-      });
-    });
-
-    textVerticalAnimationIn();
-    characterVerticalAnimationIn();
-    scaleFromZero();
-  }, []);
-
   return (
     <main className="max-w-[3000px] mx-auto p-6 text-black">
       <Header />
